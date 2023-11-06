@@ -1,0 +1,5 @@
+gen:
+  threads: 20
+
+capsolver:
+  key: ""
