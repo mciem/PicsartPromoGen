@@ -27,9 +27,9 @@ class promo:
         
         st = time.time()
         greca = self.cpsl.solve_captcha(proxy)
-        self.cnsl.log("SLV", "solved captcha", {"key": greca[:16]}, time.time()-st)
+        self.cnsl.log("SLV", "solved captcha", {"key": greca[:32]}, time.time()-st)
         
-        email, passw = f"{picsart.rand_string(16)}@gmail.com", picsart.rand_string(8)+"!@#"
+        email, passw = f"{picsart.rand_string(12)}_mciem@gmail.com", picsart.rand_string(8)+"1A!@#"
         self.cnsl.log("DBG", "creating account", {"email": email, "password": passw})
         
         st = time.time()
@@ -53,7 +53,7 @@ class promo:
                 with self.lock:
                     self.promos += 1
                     
-                    self.cnsl.log("PRO", "got promo link", {"link": link[:16], "total": self.promos}, time.time()-st)
+                    self.cnsl.log("PRO", "got promo link", {"link": link[:32], "total": self.promos}, time.time()-st)
                     self.utls.write("data/promos.txt", link)
             
             else:
