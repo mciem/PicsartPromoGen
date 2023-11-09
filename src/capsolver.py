@@ -23,12 +23,13 @@ class capsolver:
             json={
                 "clientKey": self.api_key,
                 "task": {
-                    "type": "ReCaptchaV3EnterpriseTask",
+                    "type": "ReCaptchaV3M1TaskProxyLess",
                     "websiteURL": "https://picsart.com",
                     "websiteKey": "6LdM2s8cAAAAAN7jqVXAqWdDlQ3Qca88ke3xdtpR",
                     "pageAction": "signup",
-                    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36",
-                    "proxy": f"http://{proxy}"
+                    "minScore":   0.9,
+                    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36",
+                    #"proxy": f"http://{proxy}"
                 }
             }
         ).json()
