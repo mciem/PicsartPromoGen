@@ -34,7 +34,7 @@
 
 - [X] Create account
 - [X] Claim link
-- [ ] Get promos.discord.com link
+- [ ] Get promos.discord.com link (cant do this right now bcs discord limits one get per token
 
 ---
 
